@@ -231,7 +231,6 @@ int8_t getRayCastedWallHeight(uint8_t x) {
   double result = min(max((SCREEN_HEIGHT * 40) / (sqrt(hit->dist) * cos(fishEyeAngle)), 0), SCREEN_HEIGHT);
   result = hit->isHorizontal ? result : -result;
   free(hit);
-  //drawVerticalLine(i, dist, hit->isHorizontal);
   lastWallHeight = result;
   return result;
 }
